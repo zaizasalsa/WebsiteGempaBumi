@@ -9,6 +9,13 @@ html {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 10px 0;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -150,6 +157,15 @@ article ul li {
   border-radius: 10px;
 }
 
+.hero {
+  margin: 1rem 0;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+}
+
 .sup-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -162,9 +178,6 @@ article ul li {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-}
-.sup-cards__img img {
-  width: 100%;
 }
 .sup-cards__container {
   text-align: justify;
