@@ -20,7 +20,7 @@ function readTextFile(file) {
 const tableDataKorban = document.querySelector(".tabel-data-korban");
 
 readTextFile("assets/doc/gempa_csv.csv").then((res) => {
-  const dataList = res.split("\r\n");
+  const dataList = res.split("\n");
   let th = "";
   const trHead = document.createElement("tr");
   for (const data of dataList[0].split(",")) {
