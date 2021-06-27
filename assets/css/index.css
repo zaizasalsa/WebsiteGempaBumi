@@ -196,6 +196,11 @@ article ul li {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+}
+
 img {
   border-radius: 10px;
   width: 100%;
