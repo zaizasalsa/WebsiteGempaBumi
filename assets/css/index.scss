@@ -18,10 +18,76 @@ header {
   padding: 0;
   background-color: rgba($color: #fff, $alpha: 0.2);
   z-index: 999;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+  }
+
+  .nav-mobile {
+    height: 100%;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    #nav {
+      display: none;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.12);
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    #nav {
+      &:checked ~ nav {
+        display: flex;
+      }
+    }
+
+    &__more {
+      width: 32px;
+      height: 32px;
+      border: rgba($color: #000000, $alpha: 1);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &__line {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      margin: 0 1rem;
+
+      &::after {
+        content: "";
+        background-color: #222;
+        height: 1px;
+        width: 32px;
+        position: absolute;
+        top: 10px;
+      }
+
+      &::before {
+        content: "";
+        background-color: #222;
+        height: 1px;
+        width: 32px;
+        position: absolute;
+        top: 20px;
+      }
+    }
   }
 
   nav {
@@ -31,8 +97,7 @@ header {
     flex-direction: row;
 
     @media screen and (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
+      display: none;
     }
 
     a {
